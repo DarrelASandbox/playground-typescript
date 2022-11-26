@@ -1,0 +1,28 @@
+## About The Project
+
+- Understanding TypeScript - 2023 Edition
+- Boost your JavaScript projects with TypeScript: Learn all about core types, generics, TypeScript + React or Node & more!
+- [Maximilian Schwarzmüller](https://github.com/maxschwarzmueller)
+- [Academind](https://academind.com/)
+
+&nbsp;
+
+## Introduction
+
+- A JavaScript superset
+- Adds new features
+  - Types
+  - Interfaces
+  - Generics
+  - Decorators
+  - Next-gen JavaScript Features (compiled down for older browsers)
+  - Rich Configuration Options
+- Browser can't execute it
+- Compile TypeScript to JavaScript
+- `tsc app.ts`
+
+&nbsp;
+
+---
+
+&nbsp;
