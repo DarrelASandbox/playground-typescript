@@ -45,6 +45,9 @@
   - `undefined`
   - `Function`
   - Function Type: `() => <T>`
+  - Callback
+  - `unknown`
+  - `never`
 
 &nbsp;
 

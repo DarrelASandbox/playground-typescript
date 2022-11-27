@@ -26,6 +26,7 @@ var person = {
 };
 person.tuple.push('CaN StILl PuSH iNTo TUplE UnLeSS wE sTAtE `readonly`');
 console.log(JSON.stringify(person, null, 2));
+// Return Types, `void` & `undefined`
 var returnVoid = function () { return console.log('return void'); };
 var returnUndefined = function () {
     console.log('return undefined');
@@ -33,3 +34,16 @@ var returnUndefined = function () {
 };
 returnUndefined();
 returnVoid();
+// Function Type
+var combineValues;
+// Callback
+var addition = function (n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+};
+addition(1, 2, function (resultFromFunc) { return console.log('resultFromFunc: ' + resultFromFunc); });
+// `never`
+var throwError = function (message, code) {
+    throw { message: message, code: code };
+};
+throwError('Something went wrong!', 500);

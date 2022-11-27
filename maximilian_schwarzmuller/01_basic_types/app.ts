@@ -53,3 +53,18 @@ returnVoid();
 
 // Function Type
 let combineValues: (n1: number, n2: number) => number;
+
+// Callback
+const addition = (n1: number, n2: number, cb: (num: number) => void) => {
+  const result = n1 + n2;
+  cb(result);
+};
+
+addition(1, 2, (resultFromFunc) => console.log('resultFromFunc: ' + resultFromFunc));
+
+// `never`
+const throwError = (message: string, code: number): never => {
+  throw { message, code };
+};
+
+throwError('Something went wrong!', 500);
