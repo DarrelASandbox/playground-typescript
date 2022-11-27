@@ -27,9 +27,15 @@
 
 - [stackoverflow - Cannot redeclare block scoped variable](https://stackoverflow.com/questions/35758584/cannot-redeclare-block-scoped-variable)
 - JS uses dynamic types (resolved at runtime) and TS uses "static types" (set during development)
-- `number`
-- `string`
-- `boolean`
+- Type Inference
+- Types
+  - `number`
+  - `string`
+  - `boolean`
+  - `object` or `{}`
+  - Array: `<T>[]`
+  - Tuple: `<T>[]` (Fixed length array)
+  - `enum E {}`
 
 &nbsp;
 
