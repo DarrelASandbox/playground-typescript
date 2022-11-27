@@ -26,3 +26,10 @@ var person = {
 };
 person.tuple.push('CaN StILl PuSH iNTo TUplE UnLeSS wE sTAtE `readonly`');
 console.log(JSON.stringify(person, null, 2));
+var returnVoid = function () { return console.log('return void'); };
+var returnUndefined = function () {
+    console.log('return undefined');
+    return;
+};
+returnUndefined();
+returnVoid();

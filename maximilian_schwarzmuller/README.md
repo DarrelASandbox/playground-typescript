@@ -39,7 +39,12 @@
   - `any`'
   - Union: `|`
   - Literal
-- Type Aliases/ Custom Types
+  - Type Aliases/ Custom Types
+  - Return Types
+  - `void`
+  - `undefined`
+  - `Function`
+  - Function Type: `() => <T>`
 
 &nbsp;
 

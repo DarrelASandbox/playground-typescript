@@ -40,3 +40,16 @@ console.log(JSON.stringify(person, null, 2));
 
 type Hotdog = number | string; // Type Aliases/ Custom Types
 type Bun = 'as-number' | 'as-text'; // Literal Types
+
+// Return Types, `void` & `undefined`
+const returnVoid = (): void => console.log('return void');
+const returnUndefined = (): undefined => {
+  console.log('return undefined');
+  return;
+};
+
+returnUndefined();
+returnVoid();
+
+// Function Type
+let combineValues: (n1: number, n2: number) => number;
