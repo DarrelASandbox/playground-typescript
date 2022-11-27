@@ -24,7 +24,7 @@ const person: {
   age: number;
   tags: string[];
   details: { description: string; lovable: boolean };
-  tuple: [string, number, boolean];
+  tuple: [string, number | string, boolean];
   role: Role;
 } = {
   name: 'TypeScript',
@@ -37,3 +37,6 @@ const person: {
 
 person.tuple.push('CaN StILl PuSH iNTo TUplE UnLeSS wE sTAtE `readonly`');
 console.log(JSON.stringify(person, null, 2));
+
+type Hotdog = number | string; // Type Aliases/ Custom Types
+type Bun = 'as-number' | 'as-text'; // Literal Types

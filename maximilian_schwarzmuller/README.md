@@ -36,6 +36,10 @@
   - Array: `<T>[]`
   - Tuple: `<T>[]` (Fixed length array)
   - `enum E {}`
+  - `any`'
+  - Union: `|`
+  - Literal
+- Type Aliases/ Custom Types
 
 &nbsp;
 
