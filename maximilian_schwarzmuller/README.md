@@ -62,11 +62,15 @@
   - Navigate to the respective folder
   - `tsc --init` to create a `tsconfig.json` file
   - `tsc -w`
-- `tsconfig.json`
-  - Compilation:
+- [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+  - [Compilation:](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
     - `exclude`
     - `include`
     - `files`
+  - Language and Environment:
+    - `"target": "es6"`
+    - **Default:** `"lib": ["dom", "es6", "dom.iterable", "scripthost"],`
+    - **For debugging ts files using browser:** `"sourceMap": true,`
 
 &nbsp;
 
