@@ -1,3 +1,15 @@
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#01_basic_types">01_basic_types</a></li>
+    <li><a href="#02_compiler_and_config">02_compiler_and_config</a></li>
+    <li><a href="#03_classes_and_interfaces">03_classes_and_interfaces</a></li>
+  </ol>
+</details>
+
+&nbsp;
+
 ## About The Project
 
 - Understanding TypeScript - 2023 Edition
@@ -23,7 +35,7 @@
 
 &nbsp;
 
-### 01_basic_types
+## 01_basic_types
 
 - [stackoverflow - Cannot redeclare block scoped variable](https://stackoverflow.com/questions/35758584/cannot-redeclare-block-scoped-variable)
 - JS uses dynamic types (resolved at runtime) and TS uses "static types" (set during development)
@@ -55,7 +67,7 @@
 
 &nbsp;
 
-### 02_compiler_and_config
+## 02_compiler_and_config
 
 - **Watch Mode:** `tsc app.ts -w`
 - Watch the entire project
@@ -79,6 +91,28 @@
   - Type Checking:
     - `!` (Refer to `app.ts`)
     - `"strict": true`
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 03_classes_and_interfaces
+
+- What's Object-oriented Programming (OOP)?
+  - Work with (real-life) Entities in your code
+
+|                         ProductList                         |                           Product                           |                          ShoppingCart                           |
+| :---------------------------------------------------------: | :---------------------------------------------------------: | :-------------------------------------------------------------: |
+| Renders a list of products which were fetched from a server | Renders details about a product and allows addition to cart |  Renders cart products and total and allows user to order them  |
+|           Object holds rendering + fetching logic           |         Object holds rendering + cart-adding logic          | Objects holds rendering + ordering (server communication) logic |
+
+|                             Objects                             |                               Classes                                |
+| :-------------------------------------------------------------: | :------------------------------------------------------------------: |
+|                The things you work with in code                 |                        Blueprints for objects                        |
+|                    **Instances** of classes                     | Define how objects look like, which properties and methods they have |
+| Class-based creation is an alternative to using object literals |    Classes make creation of multiple, similar objects much easier    |
 
 &nbsp;
 
