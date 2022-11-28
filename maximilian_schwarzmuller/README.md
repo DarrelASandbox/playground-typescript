@@ -71,6 +71,9 @@
     - `"target": "es6"`
     - **Default:** `"lib": ["dom", "es6", "dom.iterable", "scripthost"],`
     - **For debugging ts files using browser:** `"sourceMap": true,`
+  - [**`dist` folder:**](https://stackoverflow.com/questions/22842691/what-is-the-meaning-of-the-dist-directory-in-open-source-projects) Store output files e.g. JavaScript files
+    - `"outDir": "./dist"`
+  - **`src` folder:** Store input files e.g. TypeScript files
 
 &nbsp;
 
