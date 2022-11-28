@@ -62,6 +62,11 @@
   - Navigate to the respective folder
   - `tsc --init` to create a `tsconfig.json` file
   - `tsc -w`
+- `tsconfig.json`
+  - Compilation:
+    - `exclude`
+    - `include`
+    - `files`
 
 &nbsp;
 
