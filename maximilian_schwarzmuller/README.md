@@ -54,3 +54,17 @@
 ---
 
 &nbsp;
+
+### 02_compiler_and_config
+
+- **Watch Mode:** `tsc app.ts -w`
+- Watch the entire project
+  - Navigate to the respective folder
+  - `tsc --init` to create a `tsconfig.json` file
+  - `tsc -w`
+
+&nbsp;
+
+---
+
+&nbsp;
