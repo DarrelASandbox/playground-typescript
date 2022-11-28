@@ -23,7 +23,7 @@
 
 &nbsp;
 
-### Basic Types
+### 01_basic_types
 
 - [stackoverflow - Cannot redeclare block scoped variable](https://stackoverflow.com/questions/35758584/cannot-redeclare-block-scoped-variable)
 - JS uses dynamic types (resolved at runtime) and TS uses "static types" (set during development)
