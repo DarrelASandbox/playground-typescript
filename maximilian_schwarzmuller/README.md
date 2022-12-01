@@ -115,6 +115,7 @@
 | Class-based creation is an alternative to using object literals |    Classes make creation of multiple, similar objects much easier    |
 
 - **Access Modifiers:** `public` & `private`
+- `readonly`
 
 &nbsp;
 

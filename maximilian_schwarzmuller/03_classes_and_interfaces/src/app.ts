@@ -1,14 +1,11 @@
 class Department {
-  // name: string; // Field of a class
   private employees: string[] = [];
 
-  constructor(private id: string, public name: string) {
-    // this.name = n;
-  }
+  constructor(private readonly id: string, public name: string) {}
 
   // Type checking: Tells TypeScript what `this` refers to
   describe(this: Department) {
-    console.log(`'Department:  ${this.id} ${this.name}`);
+    console.log(`Department:  ${this.id} ${this.name}`);
   }
 
   addEmployee(employee: string) {
@@ -16,17 +13,42 @@ class Department {
   }
 
   printEmployee() {
-    console.log(this.employees.length);
-    console.log(this.employees);
+    console.log('Number of Employees: ' + this.employees.length);
+    console.log('Employees List: ' + this.employees);
   }
 }
 
-const accounting = new Department('id1', 'Accounting');
+class ITDepartment extends Department {
+  constructor(id: string, public admins: string[]) {
+    super(id, 'IT');
+  }
+}
+
+class AccountingDepartment extends Department {
+  constructor(id: string, private reports: string[]) {
+    super(id, 'Accounting');
+  }
+
+  addReport(text: string) {
+    this.reports.push(text);
+  }
+
+  printReports() {
+    console.log('Accounting Reports: ' + this.reports);
+  }
+}
+
+const accounting = new AccountingDepartment('id1', ['Financial']);
 accounting.addEmployee('Max');
-accounting.addEmployee('Manu');
+accounting.addEmployee('Mad');
+accounting.addReport('404');
 
 accounting.describe();
 accounting.printEmployee();
+accounting.printReports();
 
-// const accountingCopy = { name: 'Reference to new name', describe: accounting.describe };
-// accountingCopy.describe();
+const it = new ITDepartment('id2', ['Max']);
+it.addEmployee('Mab');
+
+it.describe();
+it.printEmployee();
