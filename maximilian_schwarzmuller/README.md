@@ -116,6 +116,7 @@
 
 - **Access Modifiers:** `public` & `private`
 - `readonly`
+- `protected`
 
 &nbsp;
 
