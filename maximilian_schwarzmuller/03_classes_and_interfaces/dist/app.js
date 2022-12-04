@@ -77,3 +77,14 @@ const it = new ITDepartment('2000', ['Fat']);
 it.addEmployee('Mab');
 it.describe();
 it.printEmployee();
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    greet(phrase) {
+        console.log(`${phrase} ${this.name}!`);
+    }
+}
+const user1 = new Person('Max', 30);
+user1.greet('Howdy, this is');

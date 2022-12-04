@@ -97,3 +97,29 @@ it.addEmployee('Mab');
 // Method override
 it.describe();
 it.printEmployee();
+
+interface Greetings {
+  greet(phrase: string): void;
+}
+
+interface Character {
+  name: string;
+  age: number;
+}
+
+class Person implements Greetings, Character {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet(phrase: string) {
+    console.log(`${phrase} ${this.name}!`);
+  }
+}
+
+const user1 = new Person('Max', 30);
+user1.greet('Howdy, this is');

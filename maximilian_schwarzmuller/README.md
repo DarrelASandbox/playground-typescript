@@ -4,7 +4,12 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#01_basic_types">01_basic_types</a></li>
     <li><a href="#02_compiler_and_config">02_compiler_and_config</a></li>
-    <li><a href="#03_classes_and_interfaces">03_classes_and_interfaces</a></li>
+    <li><a href="#03_classes_and_interfaces">03_classes_and_interfaces</a>
+      <ul>
+        <li><a href="#classes">classes</a></li>
+        <li><a href="#interfaces">interfaces</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
@@ -100,6 +105,10 @@
 
 ## 03_classes_and_interfaces
 
+&nbsp;
+
+### classes
+
 - What's Object-oriented Programming (OOP)?
   - Work with (real-life) Entities in your code
 
@@ -118,6 +127,13 @@
 - `readonly`
 - `protected`
 - `abstract`
+
+&nbsp;
+
+### interfaces
+
+- Good for enforcing consistent structure
+- `implements`
 
 &nbsp;
 
