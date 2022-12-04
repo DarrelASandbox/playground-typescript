@@ -1,7 +1,6 @@
 abstract class Department {
   static fiscalYear = 2020;
   private employees: string[] = [];
-  protected files: string[] = [];
 
   constructor(protected readonly id: string, public name: string) {}
 
@@ -20,16 +19,6 @@ abstract class Department {
   printEmployee(this: Department) {
     console.log('Number of Employees: ' + this.employees.length);
     console.log('Employees List: ' + this.employees);
-  }
-}
-
-class ITDepartment extends Department {
-  constructor(id: string, public admins: string[]) {
-    super(id, 'IT');
-  }
-
-  describe() {
-    console.log('IT Department - ID: ' + this.id);
   }
 }
 
@@ -63,27 +52,27 @@ class AccountingDepartment extends Department {
   printReports() {
     console.log('Accounting Reports: ' + this.reports);
   }
+}
 
-  addFiles(file: string) {
-    this.files.push(file);
+class ITDepartment extends Department {
+  constructor(id: string, public admins: string[]) {
+    super(id, 'IT');
   }
 
-  printFiles() {
-    console.log('Accounting Files: ' + this.files);
+  describe() {
+    console.log('IT Department - ID: ' + this.id);
   }
 }
 
-const accounting = new AccountingDepartment('id1', ['Financial']);
-accounting.addEmployee('Max');
+const accounting = new AccountingDepartment('1000', ['Year End Financial Report']);
+console.log('********** Accounting Department **********');
 accounting.addEmployee('Mad');
-accounting.addReport('404');
+accounting.addEmployee('Max');
+accounting.addReport('404 Error Report');
 
 accounting.describe();
 accounting.printEmployee();
 accounting.printReports();
-
-accounting.addFiles('Super Top Secret Company Address');
-accounting.printFiles();
 
 // Getters & Setters
 accounting.mostRecentReport = 'New Report';
@@ -93,11 +82,10 @@ console.log('mostRecentReport: ' + accounting.mostRecentReport);
 const employee1 = Department.createEmployee('Mat');
 console.log(`employee1: ${employee1.name} @ fiscalYear ${Department.fiscalYear}`);
 
-// Method override
-accounting.describe();
-
-const it = new ITDepartment('id2', ['Max']);
+console.log('\n********** IT Department **********');
+const it = new ITDepartment('2000', ['Fat']);
 it.addEmployee('Mab');
 
+// Method override
 it.describe();
 it.printEmployee();

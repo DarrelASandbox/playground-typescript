@@ -4,7 +4,6 @@ class Department {
         this.id = id;
         this.name = name;
         this.employees = [];
-        this.files = [];
     }
     static createEmployee(name) {
         return { name: name };
@@ -18,15 +17,6 @@ class Department {
     }
 }
 Department.fiscalYear = 2020;
-class ITDepartment extends Department {
-    constructor(id, admins) {
-        super(id, 'IT');
-        this.admins = admins;
-    }
-    describe() {
-        console.log('IT Department - ID: ' + this.id);
-    }
-}
 class AccountingDepartment extends Department {
     get mostRecentReport() {
         if (this.lastReport)
@@ -55,28 +45,30 @@ class AccountingDepartment extends Department {
     printReports() {
         console.log('Accounting Reports: ' + this.reports);
     }
-    addFiles(file) {
-        this.files.push(file);
+}
+class ITDepartment extends Department {
+    constructor(id, admins) {
+        super(id, 'IT');
+        this.admins = admins;
     }
-    printFiles() {
-        console.log('Accounting Files: ' + this.files);
+    describe() {
+        console.log('IT Department - ID: ' + this.id);
     }
 }
-const accounting = new AccountingDepartment('id1', ['Financial']);
-accounting.addEmployee('Max');
+const accounting = new AccountingDepartment('1000', ['Year End Financial Report']);
+console.log('********** Accounting Department **********');
 accounting.addEmployee('Mad');
-accounting.addReport('404');
+accounting.addEmployee('Max');
+accounting.addReport('404 Error Report');
 accounting.describe();
 accounting.printEmployee();
 accounting.printReports();
-accounting.addFiles('Super Top Secret Company Address');
-accounting.printFiles();
 accounting.mostRecentReport = 'New Report';
 console.log('mostRecentReport: ' + accounting.mostRecentReport);
 const employee1 = Department.createEmployee('Mat');
 console.log(`employee1: ${employee1.name} @ fiscalYear ${Department.fiscalYear}`);
-accounting.describe();
-const it = new ITDepartment('id2', ['Max']);
+console.log('\n********** IT Department **********');
+const it = new ITDepartment('2000', ['Fat']);
 it.addEmployee('Mab');
 it.describe();
 it.printEmployee();
