@@ -85,11 +85,12 @@ class Person {
     constructor(name, age, skills) {
         this.name = name;
         this.age = age;
-        this.skills = skills;
+        if (skills)
+            this.skills = skills;
     }
     greet(phrase) {
         console.log(`${phrase} ${this.name}!`);
     }
 }
-const user1 = new Person('Max', 30, ['Fighting', 'Eating']);
+const user1 = new Person('Max', 30);
 user1.greet('Howdy, this is');

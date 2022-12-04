@@ -114,7 +114,8 @@ interface Greetings {
 }
 
 interface Talents {
-  skills: string[];
+  // optional properties using `?` in `interface` & `class`
+  skills?: string[];
 }
 
 interface Character extends Talents {
@@ -125,12 +126,13 @@ interface Character extends Talents {
 class Person implements Greetings, Character {
   readonly name: string;
   age: number;
-  skills: string[];
+  skills?: string[];
 
-  constructor(name: string, age: number, skills: string[]) {
+  // optional parameters using `?` in `constructor`
+  constructor(name: string, age: number, skills?: string[]) {
     this.name = name;
     this.age = age;
-    this.skills = skills;
+    if (skills) this.skills = skills;
   }
 
   greet(phrase: string) {
@@ -138,5 +140,5 @@ class Person implements Greetings, Character {
   }
 }
 
-const user1 = new Person('Max', 30, ['Fighting', 'Eating']);
+const user1 = new Person('Max', 30);
 user1.greet('Howdy, this is');

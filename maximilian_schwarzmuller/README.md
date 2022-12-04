@@ -133,9 +133,12 @@
 ### interfaces
 
 - Good for enforcing consistent structure
+- What is a core difference between a class and an interface?
+  - Interfaces can't be instantiated and are not compiled unlike classes
 - `implements`
 - `readonly`
 - `extends`
+- Optional: `?`
 
 &nbsp;
 
