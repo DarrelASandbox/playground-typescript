@@ -24,6 +24,7 @@ abstract class Department {
 
 class AccountingDepartment extends Department {
   private lastReport: string;
+  private static instance: AccountingDepartment;
 
   get mostRecentReport() {
     if (this.lastReport) return this.lastReport;
@@ -35,9 +36,14 @@ class AccountingDepartment extends Department {
     else this.addReport(value);
   }
 
-  constructor(id: string, private reports: string[]) {
+  private constructor(id: string, private reports: string[]) {
     super(id, 'Accounting');
     this.lastReport = reports[0];
+  }
+
+  static getInstance() {
+    if (AccountingDepartment.instance) return this.instance;
+    return new AccountingDepartment('1000', []);
   }
 
   describe() {
@@ -64,8 +70,10 @@ class ITDepartment extends Department {
   }
 }
 
-const accounting = new AccountingDepartment('1000', ['Year End Financial Report']);
 console.log('********** Accounting Department **********');
+// Singletons & Private Constructors
+// Or use Object Literal
+const accounting = AccountingDepartment.getInstance();
 accounting.addEmployee('Mad');
 accounting.addEmployee('Max');
 accounting.addReport('404 Error Report');
