@@ -134,6 +134,8 @@
 
 - Good for enforcing consistent structure
 - `implements`
+- `readonly`
+- `extends`
 
 &nbsp;
 

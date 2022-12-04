@@ -98,22 +98,39 @@ it.addEmployee('Mab');
 it.describe();
 it.printEmployee();
 
+// Anonymous Custom Function Type
+interface AddFn {
+  (a: number, b: number): number;
+}
+
+let add: AddFn;
+
+add = (n1: number, n2: number) => {
+  return n1 + n2;
+};
+
 interface Greetings {
   greet(phrase: string): void;
 }
 
-interface Character {
+interface Talents {
+  skills: string[];
+}
+
+interface Character extends Talents {
   name: string;
   age: number;
 }
 
 class Person implements Greetings, Character {
-  name: string;
+  readonly name: string;
   age: number;
+  skills: string[];
 
-  constructor(name: string, age: number) {
+  constructor(name: string, age: number, skills: string[]) {
     this.name = name;
     this.age = age;
+    this.skills = skills;
   }
 
   greet(phrase: string) {
@@ -121,5 +138,5 @@ class Person implements Greetings, Character {
   }
 }
 
-const user1 = new Person('Max', 30);
+const user1 = new Person('Max', 30, ['Fighting', 'Eating']);
 user1.greet('Howdy, this is');

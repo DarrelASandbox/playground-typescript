@@ -77,14 +77,19 @@ const it = new ITDepartment('2000', ['Fat']);
 it.addEmployee('Mab');
 it.describe();
 it.printEmployee();
+let add;
+add = (n1, n2) => {
+    return n1 + n2;
+};
 class Person {
-    constructor(name, age) {
+    constructor(name, age, skills) {
         this.name = name;
         this.age = age;
+        this.skills = skills;
     }
     greet(phrase) {
         console.log(`${phrase} ${this.name}!`);
     }
 }
-const user1 = new Person('Max', 30);
+const user1 = new Person('Max', 30, ['Fighting', 'Eating']);
 user1.greet('Howdy, this is');
