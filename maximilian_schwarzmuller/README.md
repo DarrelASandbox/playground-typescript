@@ -10,6 +10,7 @@
         <li><a href="#interfaces">interfaces</a></li>
       </ul>
     </li>
+    <li><a href="#04_advance_types">04_advance_types</a></li>
   </ol>
 </details>
 
@@ -139,6 +140,19 @@
 - `readonly`
 - `extends`
 - Optional: `?`
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 04_advance_types
+
+- Intersection Type
+- Type Guard
+- TS: `in`
+- JS: `instanceof`
 
 &nbsp;
 
