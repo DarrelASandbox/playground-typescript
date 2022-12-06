@@ -39,3 +39,21 @@ const useVehicle = (vehicle) => {
 };
 useVehicle(v1);
 useVehicle(v2);
+const animalSpeed = (animal) => {
+    let speed;
+    switch (animal.type) {
+        case 'bird':
+            speed = animal.flyingSpeed;
+            break;
+        case 'horse':
+            speed = animal.runningSpeed;
+    }
+    console.log('Moving at speed: ' + speed);
+};
+animalSpeed({ type: 'bird', flyingSpeed: 10 });
+const userInputElement = document.getElementById('user-input');
+userInputElement.value = 'Hi there!';
+const errorList = {
+    email: 'Not a valid email!',
+    username: 'Must start with a capital character',
+};

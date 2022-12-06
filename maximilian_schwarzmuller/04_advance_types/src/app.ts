@@ -65,3 +65,47 @@ const useVehicle = (vehicle: Vehicle) => {
 
 useVehicle(v1);
 useVehicle(v2);
+
+// Discriminated Unions
+type Bird = {
+  type: 'bird';
+  flyingSpeed: number;
+};
+
+type Horse = {
+  type: 'horse';
+  runningSpeed: number;
+};
+
+type Animal = Bird | Horse;
+
+const animalSpeed = (animal: Animal) => {
+  let speed;
+  switch (animal.type) {
+    case 'bird':
+      speed = animal.flyingSpeed;
+      break;
+    case 'horse':
+      speed = animal.runningSpeed;
+  }
+  console.log('Moving at speed: ' + speed);
+};
+
+animalSpeed({ type: 'bird', flyingSpeed: 10 });
+
+// Type Casting Syntax 1
+// const userInputElement = <HTMLInputElement>document.getElementById('user-input');
+// Type Casting Syntax 2 (So that there is no conflict with React syntax)
+const userInputElement = document.getElementById('user-input')! as HTMLInputElement;
+userInputElement.value = 'Hi there!';
+
+// Index Properties
+// Set type for multiple properties
+type ErrorContainer = {
+  [prop: string]: string;
+};
+
+const errorList: ErrorContainer = {
+  email: 'Not a valid email!',
+  username: 'Must start with a capital character',
+};

@@ -149,10 +149,18 @@
 
 ## 04_advance_types
 
-- Intersection Type
+- **Interfaces VS Types**
+  - Interfaces are recommended for defining new objects or method or property of an object where it will receive a specific component.
+  - Types are recommended when using function which will return an object.
+- **Intersection Types:** `&`
+- **Union Types:** `|`
 - Type Guard
-- TS: `in`
-- JS: `instanceof`
+- Discriminated Unions
+- **TS:** `in`
+- **JS:** `instanceof`
+- **Type Casting:** `<>` or `as`
+- **Index Type:** `[prop: string]`
+  - `prop` is equivalent to `key`
 
 &nbsp;
 
