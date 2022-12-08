@@ -11,6 +11,7 @@
       </ul>
     </li>
     <li><a href="#04_advance_types">04_advance_types</a></li>
+    <li><a href="#05_generics">05_generics</a></li>
   </ol>
 </details>
 
@@ -164,6 +165,19 @@
 - Function Overloads
 - **Optional Chaining:** `?`
 - **Nullish Coalescing:** `??`
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 05_generics
+
+- Generic Type
+- Promise Type
+- Generic Function
+- **Generic Constraint:** `extends`
 
 &nbsp;
 
