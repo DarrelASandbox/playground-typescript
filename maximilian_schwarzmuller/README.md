@@ -161,6 +161,9 @@
 - **Type Casting:** `<>` or `as`
 - **Index Type:** `[prop: string]`
   - `prop` is equivalent to `key`
+- Function Overloads
+- **Optional Chaining:** `?`
+- **Nullish Coalescing:** `??`
 
 &nbsp;
 

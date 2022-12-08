@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 const e1 = {
     name: 'Max',
     privileges: ['read'],
@@ -12,11 +13,27 @@ const printEmployeeInformation = (emp) => {
         console.log('Start Date: ' + emp.startDate);
 };
 printEmployeeInformation(e1);
-const add = (a, b) => {
+const add1 = (a, b) => {
     if (typeof a === 'string' || typeof b === 'string')
         return a.toString() + b.toString();
     return a + b;
 };
+function add2(a, b) {
+    if (typeof a === 'string' || typeof b === 'string')
+        return a.toString() + b.toString();
+    return a + b;
+}
+const someNumber = add2(1, 5);
+const someString = add2('Mad', 'Max');
+const fetchedUserData = {
+    id: 'u1',
+    name: 'Max',
+    job: { title: 'CEO', description: 'Company XYZ' },
+};
+console.log((_a = fetchedUserData === null || fetchedUserData === void 0 ? void 0 : fetchedUserData.job) === null || _a === void 0 ? void 0 : _a.title);
+const userInput = undefined;
+const storedData = userInput !== null && userInput !== void 0 ? userInput : 'DEFAULT';
+console.log(storedData);
 class Car {
     driver() {
         console.log('Driving on the highway... in this mini cooper');

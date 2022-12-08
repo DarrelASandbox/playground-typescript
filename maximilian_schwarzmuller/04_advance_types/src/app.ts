@@ -27,16 +27,47 @@ const printEmployeeInformation = (emp: CombineEmployee) => {
 
 printEmployeeInformation(e1);
 
+/******************************************************************************************************/
+
 // Union Types
 type CombineType1 = string | number;
 type CombineType2 = boolean | number;
 type CombineType3 = CombineType1 & CombineType2; // Intersection Type: number
 
 // Type Guard
-const add = (a: CombineType1, b: CombineType1) => {
+const add1 = (a: CombineType1, b: CombineType1) => {
   if (typeof a === 'string' || typeof b === 'string') return a.toString() + b.toString();
   return a + b;
 };
+
+// Function Overloads
+function add2(a: number, b: number): number;
+function add2(a: string, b: string): string;
+function add2(a: CombineType1, b: CombineType1) {
+  if (typeof a === 'string' || typeof b === 'string') return a.toString() + b.toString();
+  return a + b;
+}
+
+const someNumber = add2(1, 5);
+const someString = add2('Mad', 'Max');
+
+/******************************************************************************************************/
+
+const fetchedUserData = {
+  id: 'u1',
+  name: 'Max',
+  job: { title: 'CEO', description: 'Company XYZ' },
+};
+
+// Optional Chaining using `?`
+console.log(fetchedUserData?.job?.title);
+
+// Nullish Coalescing using `??`
+const userInput = undefined;
+const storedData = userInput ?? 'DEFAULT';
+console.log(storedData);
+
+/******************************************************************************************************/
 
 class Car {
   driver() {
@@ -66,6 +97,8 @@ const useVehicle = (vehicle: Vehicle) => {
 useVehicle(v1);
 useVehicle(v2);
 
+/******************************************************************************************************/
+
 // Discriminated Unions
 type Bird = {
   type: 'bird';
@@ -93,6 +126,8 @@ const animalSpeed = (animal: Animal) => {
 
 animalSpeed({ type: 'bird', flyingSpeed: 10 });
 
+/******************************************************************************************************/
+
 // Type Casting Syntax 1
 // const userInputElement = <HTMLInputElement>document.getElementById('user-input');
 // Type Casting Syntax 2 (So that there is no conflict with React syntax)
@@ -109,3 +144,5 @@ const errorList: ErrorContainer = {
   email: 'Not a valid email!',
   username: 'Must start with a capital character',
 };
+
+/******************************************************************************************************/
