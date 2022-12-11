@@ -81,6 +81,8 @@ console.log('textStorage: ' + textStorage.getItems());
 const numberStorage = new DataStorage<number>();
 
 const objStorage = new DataStorage<object>();
+const maeObj = { name: 'Mae' };
+objStorage.addItem(maeObj);
 objStorage.addItem({ name: 'Mad' });
 objStorage.addItem({ name: 'Max' });
 
@@ -89,6 +91,7 @@ objStorage.addItem({ name: 'Max' });
 // indexOf will look for the address and not find it
 // so it will remove the last element of the array instead
 objStorage.removeItem({ name: 'Mad' });
+objStorage.removeItem(maeObj); // Using exact same object in memory
 
 console.log('objStorage:');
 console.log(objStorage.getItems());
