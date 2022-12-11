@@ -55,3 +55,12 @@ objStorage.removeItem({ name: 'Mad' });
 objStorage.removeItem(maeObj);
 console.log('objStorage:');
 console.log(objStorage.getItems());
+function createCourseGoal(title, description, date) {
+    let courseGoal = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completedDate = date;
+    return courseGoal;
+}
+const students = ['Mad', 'Max'];
+console.log('students: ' + students);

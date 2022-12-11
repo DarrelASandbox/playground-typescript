@@ -180,6 +180,9 @@
 - **Generic Constraint:** `extends`
 - `keyof` Constraint
 - Generic Class
+- Generic Utility Type
+  - `Partial` Type
+  - `Readonly` Type
 
 &nbsp;
 

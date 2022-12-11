@@ -97,3 +97,26 @@ console.log('objStorage:');
 console.log(objStorage.getItems());
 
 /******************************************************************************************************/
+
+// Generic Utility Type
+// Partial Type
+interface CourseGoal {
+  title: string;
+  description: string;
+  completedDate: Date;
+}
+
+function createCourseGoal(title: string, description: string, date: Date): CourseGoal {
+  let courseGoal: Partial<CourseGoal> = {};
+  courseGoal.title = title;
+  courseGoal.description = description;
+  courseGoal.completedDate = date;
+  return courseGoal as CourseGoal;
+}
+
+// Readonly Type
+const students: Readonly<string[]> = ['Mad', 'Max'];
+// students.push('Mae');
+console.log('students: ' + students);
+
+/******************************************************************************************************/
