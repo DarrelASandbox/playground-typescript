@@ -8,6 +8,7 @@ function merge(objA, objB) {
     return Object.assign(objA, objB);
 }
 const mergeObj = merge({ rubbish: [{ id: 1, item: 'something' }, { boolean: true }] }, { age: 30 });
+console.log('mergeObj:');
 console.log(mergeObj);
 function countAndDescribe(element) {
     let description = 'Got no value';
@@ -17,5 +18,37 @@ function countAndDescribe(element) {
         description = 'Got ' + element.length + ' elements.';
     return [element, description];
 }
-console.log(countAndDescribe('Hi, there!'));
-console.log(countAndDescribe(['Sports', 'Cooking']));
+console.log('countAndDescribe: ' + countAndDescribe('Hi, there!'));
+console.log('countAndDescribe: ' + countAndDescribe(['Sports', 'Cooking']));
+function extractAndConvert(obj, key) {
+    return 'Value: ' + obj[key];
+}
+console.log('extractAndConvert: ' + extractAndConvert({ name: 'Max' }, 'name'));
+class DataStorage {
+    constructor() {
+        this.data = [];
+    }
+    addItem(item) {
+        this.data.push(item);
+    }
+    removeItem(item) {
+        if (this.data.indexOf(item) === -1)
+            return;
+        this.data.splice(this.data.indexOf(item), 1);
+    }
+    getItems() {
+        return [...this.data];
+    }
+}
+const textStorage = new DataStorage();
+textStorage.addItem('Mad');
+textStorage.addItem('Max');
+textStorage.removeItem('Mad');
+console.log('textStorage: ' + textStorage.getItems());
+const numberStorage = new DataStorage();
+const objStorage = new DataStorage();
+objStorage.addItem({ name: 'Mad' });
+objStorage.addItem({ name: 'Max' });
+objStorage.removeItem({ name: 'Mad' });
+console.log('objStorage:');
+console.log(objStorage.getItems());

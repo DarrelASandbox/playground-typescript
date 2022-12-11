@@ -178,6 +178,8 @@
 - Promise Type
 - Generic Function
 - **Generic Constraint:** `extends`
+- `keyof` Constraint
+- Generic Class
 
 &nbsp;
 
