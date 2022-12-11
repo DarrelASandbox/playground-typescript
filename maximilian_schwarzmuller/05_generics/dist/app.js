@@ -9,3 +9,13 @@ function merge(objA, objB) {
 }
 const mergeObj = merge({ rubbish: [{ id: 1, item: 'something' }, { boolean: true }] }, { age: 30 });
 console.log(mergeObj);
+function countAndDescribe(element) {
+    let description = 'Got no value';
+    if (element.length > 0)
+        description = 'Got 1 element.';
+    else if (element.length > 1)
+        description = 'Got ' + element.length + ' elements.';
+    return [element, description];
+}
+console.log(countAndDescribe('Hi, there!'));
+console.log(countAndDescribe(['Sports', 'Cooking']));
