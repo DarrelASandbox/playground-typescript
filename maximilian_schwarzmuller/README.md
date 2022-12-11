@@ -183,6 +183,10 @@
 - Generic Utility Type
   - `Partial` Type
   - `Readonly` Type
+- Generic Types vs Union Types
+- When can "Generics" come in very handy?
+  - In cases where you have a type that actually works together with multiple other possible types (e.g. an object which emits data of different types)
+  - Generics help you create data structures that work together or wrap values of a broad variety of types (e.g. an array that can hold any type of data).
 
 &nbsp;
 
