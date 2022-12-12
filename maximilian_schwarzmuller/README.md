@@ -12,6 +12,7 @@
     </li>
     <li><a href="#04_advance_types">04_advance_types</a></li>
     <li><a href="#05_generics">05_generics</a></li>
+    <li><a href="#06_decorators">06_decorators</a></li>
   </ol>
 </details>
 
@@ -187,6 +188,18 @@
 - When can "Generics" come in very handy?
   - In cases where you have a type that actually works together with multiple other possible types (e.g. an object which emits data of different types)
   - Generics help you create data structures that work together or wrap values of a broad variety of types (e.g. an array that can hold any type of data).
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 06_decorators
+
+- `tsconfig.json`: `"experimentalDecorators": true,`
+- Class Decorator
+- Decorator Factory
 
 &nbsp;
 
