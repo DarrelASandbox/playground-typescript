@@ -7,6 +7,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 const Logger1 = (constructor) => console.log(`Logger1:\n\n${constructor}`);
 const Logger2 = (log) => (constructor) => console.log(`Logger2:\t${log}\n\n${constructor}`);
+const WithTemplate = (template, hookId) => (constructor) => {
+    const p = new constructor();
+    const hookEL = document.getElementById(hookId);
+    if (hookEL) {
+        hookEL.innerHTML = template;
+        hookEL.querySelector('h1').textContent = p.name;
+    }
+};
 let Person = class Person {
     constructor() {
         this.name = 'Max';
@@ -15,7 +23,8 @@ let Person = class Person {
 };
 Person = __decorate([
     Logger1,
-    Logger2('logging')
+    Logger2('logging'),
+    WithTemplate('<h1>Person Object (Template)</h1>', 'app')
 ], Person);
 const p1 = new Person();
 console.log(p1);

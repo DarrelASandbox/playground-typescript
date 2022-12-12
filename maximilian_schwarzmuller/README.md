@@ -197,6 +197,8 @@
 
 ## 06_decorators
 
+- [What exactly is metaprogramming?](https://stackoverflow.com/questions/514644/what-exactly-is-metaprogramming)
+- [Angular - Architecture Components - Component metadata](https://angular.io/guide/architecture-components#component-metadata)
 - `tsconfig.json`: `"experimentalDecorators": true,`
 - Class Decorator
 - Decorator Factory
