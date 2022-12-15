@@ -202,6 +202,24 @@
 - `tsconfig.json`: `"experimentalDecorators": true,`
 - Class Decorator
 - Decorator Factory
+- Property Decorators
+  - [MDN - Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+
+&nbsp;
+
+> **Ahmet:** decorators are especially useful to implement Aspect Oriented Programming, which is a kind of meta-programming.
+>
+> Using decorators you can apply one of the most important programming principle, "Separation of Concerns". And AOP is all about separation of "cross-cutting concerns".
+>
+> What are cross-cutting concerns?
+>
+> These are extra work that you need in many applications you write, but not directly related with your business logic. Most know example is a Logger, but there are many. For example Udemy's coupons may be a good candidate to classify as cross-cutting concern, because you can also apply the same promotion logic in any online-shopping application. Validation, Authentication, Authorization, Caching are some examples.
+>
+> Sure you can implement all these stuff directly coding into your use-case realization code, but this will clutter your business logic. And what if you need to remove/change this logic later, if you scatter this in many places? In short decorators will make your code more readable and increase the maintainability of your code.
+>
+> AOP is important and decorators is just a way to implement it. You may also use Proxy pattern to implement such stuff dynamically (dynamically add caching, adjusting buffers for example).
+>
+> Since the decorators in JS are still tagged as experimental you may not find enough information about them in JS world. But they are used in Java world since years with Spring and AspectJ. In Java world they are named as "Annotations"...
 
 &nbsp;
 
