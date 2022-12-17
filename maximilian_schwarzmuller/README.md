@@ -204,6 +204,9 @@
 - Decorator Factory
 - Property Decorators
   - [MDN - Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+- Accessor Decorators
+- Method Decorators
+- Parameter Decorator
 
 &nbsp;
 
