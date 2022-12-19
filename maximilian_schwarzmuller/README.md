@@ -13,6 +13,7 @@
     <li><a href="#04_advance_types">04_advance_types</a></li>
     <li><a href="#05_generics">05_generics</a></li>
     <li><a href="#06_decorators">06_decorators</a></li>
+    <li><a href="#07_drag_and_drop_project">07_drag_and_drop_project</a></li>
   </ol>
 </details>
 
@@ -229,6 +230,14 @@
 > AOP is important and decorators is just a way to implement it. You may also use Proxy pattern to implement such stuff dynamically (dynamically add caching, adjusting buffers for example).
 >
 > Since the decorators in JS are still tagged as experimental you may not find enough information about them in JS world. But they are used in Java world since years with Spring and AspectJ. In Java world they are named as "Annotations"...
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 07_drag_and_drop_project
 
 &nbsp;
 
