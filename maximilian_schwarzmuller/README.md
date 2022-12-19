@@ -211,6 +211,8 @@
 - Parameter Decorator
 - Return Types for Accessor and Method Decorators
   - [PropertyDescriptor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+- Validation with decorators
+- [GitHub - class-validator](https://github.com/typestack/class-validator)
 
 &nbsp;
 

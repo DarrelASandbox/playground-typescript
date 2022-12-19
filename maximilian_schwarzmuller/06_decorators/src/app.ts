@@ -129,3 +129,76 @@ const button = document.querySelector('button');
 button?.addEventListener('click', p.showMessage);
 
 /******************************************************************************************************/
+
+interface ValidatorConfig {
+  [property: string]: {
+    [validatingProps: string]: string[]; // ['required', 'positive']
+  };
+}
+
+const registeredValidators: ValidatorConfig = {};
+
+// Naive validator, if we have other validator registered
+// for this property already, it would be overwritten
+// Ideally to retrieve any existing validators and then
+// copy them into this array and
+// only add required to that existing array
+const Required = (target: any, propName: string) => {
+  registeredValidators[target.constructor.name] = {
+    ...registeredValidators[target.constructor.name],
+    [propName]: ['required'],
+  };
+};
+
+const PositiveNumber = (target: any, propName: string) => {
+  registeredValidators[target.constructor.name] = {
+    ...registeredValidators[target.constructor.name],
+    [propName]: ['positive'],
+  };
+};
+
+const validate = (obj: any) => {
+  // prototype chain
+  const objValidatorConfig = registeredValidators[obj.constructor.name];
+  if (!objValidatorConfig) return true;
+
+  let isValid = true;
+  for (const prop in objValidatorConfig) {
+    for (const validator of objValidatorConfig[prop]) {
+      switch (validator) {
+        case 'required':
+          isValid = isValid && !!obj[prop];
+          break;
+        case 'positive':
+          isValid = isValid && obj[prop] > 0;
+          break;
+      }
+    }
+  }
+  return isValid;
+};
+
+class Course {
+  @Required
+  title: string;
+  @PositiveNumber
+  price: number;
+
+  constructor(t: string, p: number) {
+    this.title = t;
+    this.price = p;
+  }
+}
+
+const courseForm = document.querySelector('form')!;
+courseForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const titleEl = document.getElementById('title') as HTMLInputElement;
+  const priceEl = document.getElementById('price') as HTMLInputElement;
+  const createdCourse = new Course(titleEl.value, +priceEl.value);
+
+  if (!validate(createdCourse)) return alert('Invalid input!');
+  console.log(createdCourse);
+});
+
+/******************************************************************************************************/
