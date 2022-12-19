@@ -200,7 +200,9 @@
 - [What exactly is metaprogramming?](https://stackoverflow.com/questions/514644/what-exactly-is-metaprogramming)
 - [Angular - Architecture Components - Component metadata](https://angular.io/guide/architecture-components#component-metadata)
 - `tsconfig.json`: `"experimentalDecorators": true,`
+- [**Decorators are called when the class is declared—not when an object is instantiated**](https://stackoverflow.com/a/49463774/13009010)
 - Class Decorator
+  - **Returning (and changing) a Class in a Class Decorator**
 - Decorator Factory
 - Property Decorators
   - [MDN - Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)

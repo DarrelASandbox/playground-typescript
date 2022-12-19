@@ -12,14 +12,24 @@ const Logger2 = (log: string) => (constructor: Function) =>
 // There we only write our component logic in a TS class,
 // and instead of the need of inheriting from a Component class (like for example in React's class based components),
 // we simply write an @Component() decorator which takes the associated HTML template, CSS and selector as parameters.
-const WithTemplate = (template: string, hookId: string) => (constructor: any) => {
-  const p = new constructor();
-  const hookEL = document.getElementById(hookId);
-  if (hookEL) {
-    hookEL.innerHTML = template;
-    hookEL.querySelector('h1')!.textContent = p.name;
-  }
-};
+const WithTemplate =
+  <T extends { new (...args: any[]): { name: string } }>(
+    template: string,
+    hookId: string
+  ) =>
+  (originalConstructor: T) => {
+    console.log('TEMPLATE FACTORY');
+    return class extends originalConstructor {
+      constructor(...args: any[]) {
+        super();
+        const hookEL = document.getElementById(hookId);
+        if (hookEL) {
+          hookEL.innerHTML = template;
+          hookEL.querySelector('h1')!.textContent = this.name;
+        }
+      }
+    };
+  };
 
 @Logger1
 @Logger2('logging')
@@ -32,8 +42,8 @@ class Person {
   }
 }
 
-const p1 = new Person();
-console.log(p1);
+// const p1 = new Person();
+// console.log(p1);
 
 /******************************************************************************************************/
 

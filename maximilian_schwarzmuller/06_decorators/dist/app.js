@@ -10,13 +10,18 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 const Logger1 = (constructor) => console.log(`Logger1:\n\n${constructor}`);
 const Logger2 = (log) => (constructor) => console.log(`Logger2:\t${log}\n\n${constructor}`);
-const WithTemplate = (template, hookId) => (constructor) => {
-    const p = new constructor();
-    const hookEL = document.getElementById(hookId);
-    if (hookEL) {
-        hookEL.innerHTML = template;
-        hookEL.querySelector('h1').textContent = p.name;
-    }
+const WithTemplate = (template, hookId) => (originalConstructor) => {
+    console.log('TEMPLATE FACTORY');
+    return class extends originalConstructor {
+        constructor(...args) {
+            super();
+            const hookEL = document.getElementById(hookId);
+            if (hookEL) {
+                hookEL.innerHTML = template;
+                hookEL.querySelector('h1').textContent = this.name;
+            }
+        }
+    };
 };
 let Person = class Person {
     constructor() {
@@ -29,8 +34,6 @@ Person = __decorate([
     Logger2('logging'),
     WithTemplate('<h1>Person Object (Template)</h1>', 'app')
 ], Person);
-const p1 = new Person();
-console.log(p1);
 const Log = (target, propertyName) => {
     console.log('Property decorator:');
     console.log(target, propertyName);
