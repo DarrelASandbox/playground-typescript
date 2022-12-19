@@ -100,3 +100,32 @@ class Product {
 }
 
 /******************************************************************************************************/
+
+const Autobind = (target: any, methodName: string, descriptor: PropertyDescriptor) => {
+  const originalMethod = descriptor.value;
+  const updateDescriptor: PropertyDescriptor = {
+    configurable: true,
+    enumerable: false,
+    get() {
+      const boundFn = originalMethod.bind(this);
+      return boundFn;
+    },
+  };
+
+  return updateDescriptor;
+};
+
+class Printer {
+  message = 'This works!';
+
+  @Autobind
+  showMessage() {
+    console.log(this.message);
+  }
+}
+
+const p = new Printer();
+const button = document.querySelector('button');
+button?.addEventListener('click', p.showMessage);
+
+/******************************************************************************************************/
