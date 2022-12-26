@@ -5,7 +5,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-function autobind(target, methodName, descriptor) {
+function validate(validateInput) {
+    let isValid = true;
+    if (validateInput.required) {
+        isValid = isValid && validateInput.value.toString().trim().length !== 0;
+    }
+    if (validateInput.minLength != null && typeof validateInput.value === 'string') {
+        isValid = isValid && validateInput.value.length >= validateInput.minLength;
+    }
+    if (validateInput.maxLength != null && typeof validateInput.value === 'string') {
+        isValid = isValid && validateInput.value.length <= validateInput.maxLength;
+    }
+    if (validateInput.min != null && typeof validateInput.value === 'number') {
+        isValid = isValid && validateInput.value >= validateInput.min;
+    }
+    if (validateInput.max != null && typeof validateInput.value === 'number') {
+        isValid = isValid && validateInput.value <= validateInput.max;
+    }
+    return isValid;
+}
+function autoBind(target, methodName, descriptor) {
     const originalMethod = descriptor.value;
     const adjDescriptor = {
         configurable: true,
@@ -33,9 +52,21 @@ class ProjectInput {
         const enteredTitle = this.titleInputElement.value;
         const enteredDescription = this.descriptionInputElement.value;
         const enteredPeople = this.peopleInputElement.value;
-        if (enteredTitle.trim().length === 0 ||
-            enteredDescription.trim().length === 0 ||
-            enteredPeople.trim().length === 0) {
+        const titleValidate = { value: enteredTitle, required: true };
+        const descriptionValidate = {
+            value: enteredDescription,
+            required: true,
+            minLength: 5,
+        };
+        const peopleValidate = {
+            value: +enteredPeople,
+            required: true,
+            min: 1,
+            max: 5,
+        };
+        if (!validate(titleValidate) ||
+            !validate(descriptionValidate) ||
+            !validate(peopleValidate)) {
             alert('Invalid input, please try again!');
             return;
         }
@@ -64,6 +95,6 @@ class ProjectInput {
     }
 }
 __decorate([
-    autobind
+    autoBind
 ], ProjectInput.prototype, "submitHandler", null);
 const prjInput = new ProjectInput();
