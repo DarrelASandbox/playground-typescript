@@ -14,6 +14,7 @@
     <li><a href="#05_generics">05_generics</a></li>
     <li><a href="#06_decorators">06_decorators</a></li>
     <li><a href="#07_drag_and_drop_project">07_drag_and_drop_project</a></li>
+    <li><a href="#08_modules_and_namespace">08_modules_and_namespace</a></li>
   </ol>
 </details>
 
@@ -238,6 +239,17 @@
 &nbsp;
 
 ## 07_drag_and_drop_project
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 08_modules_and_namespace
+
+- `namespace` & File Bundling
+- ES6 Imports/Exports
 
 &nbsp;
 
