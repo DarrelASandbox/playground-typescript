@@ -249,6 +249,8 @@
 ## 08_modules_and_namespace
 
 - `namespace` & File Bundling
+  - `///`
+  - `reference`
 - ES6 Imports/Exports
 
 &nbsp;
