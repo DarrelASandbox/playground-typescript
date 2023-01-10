@@ -1,8 +1,8 @@
-/// <reference path="drag-drop-interface.ts" />
-/// <reference path="project-model.ts" />
-/// <reference path="project-state.ts" />
-/// <reference path="validation.ts" />
-/// <reference path="autobind-decorator.ts" />
+/// <reference path="models/drag-drop.ts" />
+/// <reference path="models/project.ts" />
+/// <reference path="state/project-state.ts" />
+/// <reference path="utils/validation.ts" />
+/// <reference path="decorator/autobind.ts" />
 
 namespace App {
   class ProjectItem
