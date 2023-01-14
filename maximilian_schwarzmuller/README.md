@@ -252,6 +252,8 @@
   - `///`
   - `reference`
 - ES6 Imports/Exports
+  - `*`
+  - `default`
 
 &nbsp;
 
