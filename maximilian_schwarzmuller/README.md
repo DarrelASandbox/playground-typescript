@@ -265,6 +265,7 @@
 ## 09_webpacks
 
 - [Webpack](https://webpack.js.org/)
+- `devtool: 'source-map',`: Allow us to see sources on browser dev tools
 
 |                   Without                    |                       With                       |
 | :------------------------------------------: | :----------------------------------------------: |
