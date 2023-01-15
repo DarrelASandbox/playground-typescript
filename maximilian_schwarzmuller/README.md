@@ -15,6 +15,7 @@
     <li><a href="#06_decorators">06_decorators</a></li>
     <li><a href="#07_drag_and_drop_project">07_drag_and_drop_project</a></li>
     <li><a href="#08_modules_and_namespace">08_modules_and_namespace</a></li>
+    <li><a href="#09_webpacks">09_webpacks</a></li>
   </ol>
 </details>
 
@@ -254,6 +255,22 @@
 - ES6 Imports/Exports
   - `*`
   - `default`
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 09_webpacks
+
+- [Webpack](https://webpack.js.org/)
+
+|                   Without                    |                       With                       |
+| :------------------------------------------: | :----------------------------------------------: |
+| Multiple .ts files & imports (Http requests) |       Code bundles, less imports required        |
+|              Not optimized code              | Optimized (minified) code, less code to download |
+|     "External" development server needed     |       More build steps can be added easily       |
 
 &nbsp;
 
