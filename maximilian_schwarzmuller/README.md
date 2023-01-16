@@ -294,6 +294,7 @@
   - [Lodash](https://lodash.com/)
   - `npm i @types/lodash`
   - Using `declare` last resort
+  - [class-transformer](https://github.com/typestack/class-transformer)
 - TypeScript specific Libraries
 
 &nbsp;
