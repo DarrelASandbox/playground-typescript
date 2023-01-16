@@ -16,6 +16,7 @@
     <li><a href="#07_drag_and_drop_project">07_drag_and_drop_project</a></li>
     <li><a href="#08_modules_and_namespace">08_modules_and_namespace</a></li>
     <li><a href="#09_webpacks">09_webpacks</a></li>
+    <li><a href="#10_third_party_libraries">10_third_party_libraries</a></li>
   </ol>
 </details>
 
@@ -280,6 +281,18 @@
   - `typescript`: Now we already installed typescript globally on our machine, which is why we are able to run `tsc -w`. Now it is a good practice to auto install a copy of typescript per project, so that for this project, you got a specific typescript version. The advantages that if you ever change your global typescript version, you don't break your project version, your project setup if there we're breaking changes in typescript itself, so we can lock in a specific version of typescript for a project, that's why we installed it separately here.
   - `ts-loader` now is a package which will work together with webpack. The ts loader is a package that tells webpack how to convert typescript code to Javascript, so that webpack is able to do both, compile our code, with the help of typescript loader, which in turn of course uses the typescript compiler under the hood, and then webpack also is able to bundle our emitted javascript files into a bundled js file into one bundled code file.
 - `npm install --save-dev clean-webpack-plugin`
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 10_third_party_libraries
+
+- Using "Normal" Libraries with TypeScript
+  - [Lodash](https://lodash.com/)
+- TypeScript specific Libraries
 
 &nbsp;
 
