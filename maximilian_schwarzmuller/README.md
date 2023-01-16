@@ -279,6 +279,7 @@
   - `webpack-dev-server` to have that built in development server, which starts webpack under the hood, which watches our files for changes, automatically triggers webpack to recompile when something changes, and which auto serves our page.
   - `typescript`: Now we already installed typescript globally on our machine, which is why we are able to run `tsc -w`. Now it is a good practice to auto install a copy of typescript per project, so that for this project, you got a specific typescript version. The advantages that if you ever change your global typescript version, you don't break your project version, your project setup if there we're breaking changes in typescript itself, so we can lock in a specific version of typescript for a project, that's why we installed it separately here.
   - `ts-loader` now is a package which will work together with webpack. The ts loader is a package that tells webpack how to convert typescript code to Javascript, so that webpack is able to do both, compile our code, with the help of typescript loader, which in turn of course uses the typescript compiler under the hood, and then webpack also is able to bundle our emitted javascript files into a bundled js file into one bundled code file.
+- `npm install --save-dev clean-webpack-plugin`
 
 &nbsp;
 
