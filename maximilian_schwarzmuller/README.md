@@ -295,6 +295,7 @@
   - `npm i @types/lodash`
   - Using `declare` last resort
   - [class-transformer](https://github.com/typestack/class-transformer)
+  - [class-validator](https://github.com/typestack/class-validator)
 - TypeScript specific Libraries
 
 &nbsp;

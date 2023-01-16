@@ -34,3 +34,13 @@ for (const prod of loadedProducts2) {
 }
 
 /* ************************************************** */
+
+import { validate } from 'class-validator';
+
+const p2 = new Product('', -5.99);
+validate(p2).then((error) => {
+  if (error) console.log('Validation error');
+  else console.log(p2.getInformation());
+});
+
+/* ************************************************** */
