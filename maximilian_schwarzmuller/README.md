@@ -292,6 +292,8 @@
 
 - Using "Normal" Libraries with TypeScript
   - [Lodash](https://lodash.com/)
+  - `npm i @types/lodash`
+  - Using `declare` last resort
 - TypeScript specific Libraries
 
 &nbsp;
