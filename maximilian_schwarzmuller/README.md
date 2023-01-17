@@ -17,6 +17,7 @@
     <li><a href="#08_modules_and_namespace">08_modules_and_namespace</a></li>
     <li><a href="#09_webpacks">09_webpacks</a></li>
     <li><a href="#10_third_party_libraries">10_third_party_libraries</a></li>
+    <li><a href="#11_share_a_place_app">11_share_a_place_app</a></li>
   </ol>
 </details>
 
@@ -297,6 +298,14 @@
   - [class-transformer](https://github.com/typestack/class-transformer)
   - [class-validator](https://github.com/typestack/class-validator)
 - TypeScript specific Libraries
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 11_share_a_place_app
 
 &nbsp;
 
