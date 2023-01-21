@@ -308,6 +308,7 @@
 ## 11_share_a_place_app
 
 - [Google Maps Platform - Web Services - Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview)
+- `npm i -D @types/google.maps`
 
 &nbsp;
 

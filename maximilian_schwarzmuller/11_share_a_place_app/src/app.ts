@@ -2,8 +2,6 @@ import axios from 'axios';
 
 const GOOGLE_API_KEY = '';
 
-declare const google: any;
-
 type GoogleGeocodingResponse = {
   results: { geometry: { location: { lat: number; lng: number } } }[];
   status: 'OK' | 'ZERO_RESULTS';
@@ -26,7 +24,7 @@ function searchAddressHandler(e: Event) {
     .then((res) => {
       if (res.data.status !== 'OK') throw new Error('Could not fetch location!');
       const coordinates = res.data.results[0].geometry.location;
-      const map = new google.maps.Map(document.getElementById('map'), {
+      const map = new google.maps.Map(document.getElementById('map')!, {
         center: coordinates,
         zoom: 8,
       });
