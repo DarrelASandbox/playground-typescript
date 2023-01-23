@@ -19,6 +19,7 @@
     <li><a href="#10_third_party_libraries">10_third_party_libraries</a></li>
     <li><a href="#11_share_a_place_app">11_share_a_place_app</a></li>
     <li><a href="#12_react_with_typescript">12_react_with_typescript</a></li>
+    <li><a href="#13_nodejs_and_express">13_nodejs_and_express</a></li>
   </ol>
 </details>
 
@@ -320,6 +321,19 @@
 ## 12_react_with_typescript
 
 - `npx create-react-app . --template typescript`
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 13_nodejs_and_express
+
+- [Node.js with TypeScript](https://nodejs.dev/en/learn/nodejs-with-typescript/)
+- `npm init -y && tsc --init`
+- `npm i express`
+- `npm i -D @types/node && npm i -D @types/express`
 
 &nbsp;
 
