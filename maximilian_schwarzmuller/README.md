@@ -18,6 +18,7 @@
     <li><a href="#09_webpacks">09_webpacks</a></li>
     <li><a href="#10_third_party_libraries">10_third_party_libraries</a></li>
     <li><a href="#11_share_a_place_app">11_share_a_place_app</a></li>
+    <li><a href="#12_react_with_typescript">12_react_with_typescript</a></li>
   </ol>
 </details>
 
@@ -309,6 +310,16 @@
 
 - [Google Maps Platform - Web Services - Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview)
 - `npm i -D @types/google.maps`
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 12_react_with_typescript
+
+- `npx create-react-app . --template typescript`
 
 &nbsp;
 
