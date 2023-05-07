@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
     <title>ToDoList using Vite with TS</title>
   </head>
   <body>
-    <ul id="todolist"></ul>
+    <div>
+      <ul id="todolist"></ul>
+    </div>
 
-    <form id="todoform" action="">
+    <form id="todoform">
       <input id="todoinput" type="text" placeholder="Enter a todo" />
-      <button id="btn">Click Me!</button>
+      <button id="btn">Add</button>
     </form>
 
     <script type="module" src="/src/main.ts"></script>
