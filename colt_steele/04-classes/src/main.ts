@@ -3,7 +3,7 @@ class Player {
   constructor(
     public first: string,
     public last: string,
-    private _score: number = 0,
+    protected _score: number = 0,
     readonly readme: string = 'This a new player.'
   ) {}
 
@@ -22,6 +22,20 @@ class Player {
   }
 }
 
+class Admin extends Player {
+  private isAdmin: boolean = true;
+
+  maxScore() {
+    this._score = 99999;
+  }
+
+  get status(): boolean {
+    return this.isAdmin;
+  }
+}
+
 const elton = new Player('Elton', 'Steele');
+const elton2 = new Admin('Elton', 'Admin');
 console.log(elton.fullName);
 console.log(elton.score);
+console.log(`${elton2.fullName} isAdmin: ${elton2.status}`);
