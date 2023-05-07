@@ -3,22 +3,15 @@ interface Todo {
   completed: boolean;
 }
 
-const todos: Todo[] = [];
-
 // Type assertions with DOM
 const btn = document.getElementById('btn') as HTMLButtonElement;
 const input = document.getElementById('todoinput') as HTMLInputElement;
 const form = document.getElementById('todoform') as HTMLFormElement;
 const list = document.getElementById('todolist') as HTMLUListElement;
 
-const submitHandler = (e: SubmitEvent) => {
-  e.preventDefault();
-  const newTodo: Todo = { text: input.value, completed: false };
-  createTodo(newTodo);
-  todos.push(newTodo);
-  input.value = '';
-
-  console.log(todos);
+const readLocalStorage = (): Todo[] => {
+  const todosJSON = localStorage.getItem('todos');
+  return todosJSON === null ? [] : JSON.parse(todosJSON);
 };
 
 const createTodo = (todo: Todo) => {
@@ -28,6 +21,19 @@ const createTodo = (todo: Todo) => {
   newListItem.append(todo.text);
   newListItem.append(checkbox);
   list.append(newListItem);
+};
+
+const todos: Todo[] = readLocalStorage();
+todos.forEach(createTodo);
+
+const submitHandler = (e: SubmitEvent) => {
+  e.preventDefault();
+  const newTodo: Todo = { text: input.value, completed: false };
+  createTodo(newTodo);
+  todos.push(newTodo);
+
+  localStorage.setItem('todos', JSON.stringify(todos));
+  input.value = '';
 };
 
 form.addEventListener('submit', submitHandler);
