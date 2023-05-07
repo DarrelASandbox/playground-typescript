@@ -14,10 +14,19 @@ const readLocalStorage = (): Todo[] => {
   return todosJSON === null ? [] : JSON.parse(todosJSON);
 };
 
+const saveToLocalStorage = () => localStorage.setItem('todos', JSON.stringify(todos));
+
 const createTodo = (todo: Todo) => {
   const newListItem = document.createElement('li');
   const checkbox = document.createElement('input');
+
   checkbox.type = 'checkbox';
+  checkbox.checked = todo.completed;
+  checkbox.addEventListener('change', () => {
+    todo.completed = checkbox.checked;
+    localStorage.setItem('todos', JSON.stringify(todos));
+  });
+
   newListItem.append(todo.text);
   newListItem.append(checkbox);
   list.append(newListItem);
@@ -31,8 +40,8 @@ const submitHandler = (e: SubmitEvent) => {
   const newTodo: Todo = { text: input.value, completed: false };
   createTodo(newTodo);
   todos.push(newTodo);
+  saveToLocalStorage();
 
-  localStorage.setItem('todos', JSON.stringify(todos));
   input.value = '';
 };
 
