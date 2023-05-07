@@ -39,3 +39,31 @@ const elton2 = new Admin('Elton', 'Admin');
 console.log(elton.fullName);
 console.log(elton.score);
 console.log(`${elton2.fullName} isAdmin: ${elton2.status}`);
+
+// **********************************************
+// ************ Classes & Interfaces ************
+// **********************************************
+
+interface Colorful {
+  color: string;
+}
+
+interface Printable {
+  print(): void;
+}
+
+class Bike implements Colorful {
+  constructor(public model: string, public color: string) {}
+}
+
+class Jacket implements Colorful, Printable {
+  constructor(public brand: string, public color: string) {}
+
+  print() {
+    console.log(`This ${this.brand} jacket is ${this.color} in color.`);
+  }
+}
+
+const bike1 = new Bike('B001', 'red');
+const jacket1 = new Jacket('Prada', 'black');
+jacket1.print();
