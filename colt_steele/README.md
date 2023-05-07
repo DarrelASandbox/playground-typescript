@@ -19,8 +19,14 @@
 
 &nbsp;
 
-- `tsc 02-functions.ts`
-- `node 02-functions.ts`
+```sh
+tsc 02-functions.ts # Compile
+node 02-functions.ts # Run using nodeJS
+tsc --init # Create `tsconfig.json`
+tsc -w # Watch mode for all `.ts` files
+```
+
+- [tsconfig#files](https://www.typescriptlang.org/tsconfig#files)
 
 &nbsp;
 
