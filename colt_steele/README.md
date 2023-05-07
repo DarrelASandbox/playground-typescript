@@ -24,6 +24,7 @@ tsc 02-functions.ts # Compile
 node 02-functions.ts # Run using nodeJS
 tsc --init # Create `tsconfig.json`
 tsc -w # Watch mode for all `.ts` files
+npx create-vite
 ```
 
 - [tsconfig#files](https://www.typescriptlang.org/tsconfig#files)
