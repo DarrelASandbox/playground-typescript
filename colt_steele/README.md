@@ -28,6 +28,7 @@ npx create-vite
 ```
 
 - [tsconfig#files](https://www.typescriptlang.org/tsconfig#files)
+- [type-declarations](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html#dts-files)
 
 &nbsp;
 
