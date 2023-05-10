@@ -30,6 +30,13 @@ npx create-vite
 - [tsconfig#files](https://www.typescriptlang.org/tsconfig#files)
 - [type-declarations](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html#dts-files)
 
+```sh
+# Check the respective package's package.json inside node_modules for typings
+npm i axios # Comes with types
+npm i lodash # Doesn't have typings in package.json
+npm i --save-dev @types/lodash
+```
+
 &nbsp;
 
 ---

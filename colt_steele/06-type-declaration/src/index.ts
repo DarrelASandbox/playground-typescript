@@ -1,4 +1,5 @@
 import axios from 'axios';
+import _ from 'lodash';
 
 // has `index.d.ts` which contains type definition
 axios
@@ -50,3 +51,9 @@ axios
   .get<User[]>('https://jsonplaceholder.typicode.com/users')
   .then((res) => res.data.forEach(printUser))
   .catch((e) => console.log(e));
+
+// **********************************************
+
+_.sample([1, 2, 3, 4, 5, 6]);
+
+// **********************************************
