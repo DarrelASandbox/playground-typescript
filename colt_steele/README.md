@@ -1,12 +1,3 @@
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
-  </ol>
-</details>
-
-&nbsp;
-
 ## About The Project
 
 - Mastering TypeScript - 2023 Edition
@@ -36,6 +27,9 @@ npm i axios # Comes with types
 npm i lodash # Doesn't have typings in package.json
 npm i --save-dev @types/lodash
 ```
+
+- [Modules](https://www.typescriptlang.org/docs/handbook/modules.html)
+- [Namespaces](https://www.typescriptlang.org/docs/handbook/namespaces.html)
 
 &nbsp;
 
