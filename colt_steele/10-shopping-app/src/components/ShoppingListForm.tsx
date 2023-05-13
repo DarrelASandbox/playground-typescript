@@ -1,19 +1,24 @@
 import { useState } from 'react';
 
 interface ShoppingListFormProps {
-  onAddItem: (item: string) => void;
+  onAddItem: (item: string, quantity: number) => void;
 }
 
 const ShoppingListForm = ({ onAddItem }: ShoppingListFormProps): JSX.Element => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputProduct, setInputProduct] = useState('');
+  const [inputQuantity, setInputQuantity] = useState('1');
 
-  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setInputValue(e.target.value);
+  const changeProductHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setInputProduct(e.target.value);
+
+  const changeQuantityHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setInputQuantity(e.target.value);
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    onAddItem(inputValue);
-    setInputValue('');
+    onAddItem(inputProduct, +inputQuantity);
+    setInputProduct('');
+    setInputQuantity('1');
   };
 
   return (
@@ -21,8 +26,16 @@ const ShoppingListForm = ({ onAddItem }: ShoppingListFormProps): JSX.Element => 
       <input
         type="text"
         placeholder="Product Name"
-        value={inputValue}
-        onChange={changeHandler}
+        value={inputProduct}
+        onChange={changeProductHandler}
+      />
+      <input
+        type="number"
+        placeholder="Quantity"
+        value={inputQuantity}
+        onChange={changeQuantityHandler}
+        min={0}
+        max={99}
       />
       <button type="submit">Add Item</button>
     </form>
