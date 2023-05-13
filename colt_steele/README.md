@@ -34,7 +34,7 @@ npm i --save-dev @types/lodash
 - [webpack - typescript guide](https://webpack.js.org/guides/typescript/)
 
 ```sh
-npm i --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader
+npm i --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin typescript ts-loader
 ```
 
 &nbsp;
