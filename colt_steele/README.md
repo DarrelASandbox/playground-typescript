@@ -37,6 +37,11 @@ npm i --save-dev @types/lodash
 npm i --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin typescript ts-loader
 ```
 
+```sh
+npm i uuid
+npm i --save-dev @types/uuid
+```
+
 &nbsp;
 
 ---
