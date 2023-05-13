@@ -1,23 +1,29 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 
 interface ShoppingListFormProps {
   onAddItem: (item: string) => void;
 }
 
 const ShoppingListForm = ({ onAddItem }: ShoppingListFormProps): JSX.Element => {
-  // set initial value of `null` because
-  // form element doesn't exist at the beginning when the `useRef` hook runs
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [inputValue, setInputValue] = useState('');
+
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setInputValue(e.target.value);
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    const newProduct = inputRef.current?.value;
-    if (newProduct) onAddItem(newProduct);
+    onAddItem(inputValue);
+    setInputValue('');
   };
 
   return (
     <form onSubmit={submitHandler}>
-      <input type="text" placeholder="Product Name" ref={inputRef} />
+      <input
+        type="text"
+        placeholder="Product Name"
+        value={inputValue}
+        onChange={changeHandler}
+      />
       <button type="submit">Add Item</button>
     </form>
   );
