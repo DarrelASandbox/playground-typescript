@@ -3,9 +3,9 @@ import { Greeter } from './components/Greeter';
 function App() {
   return (
     <>
-      <Greeter />
-      <Greeter />
-      <Greeter />
+      <Greeter person="Colt" />
+      <Greeter person="Blue" />
+      <Greeter person="Elton" />
     </>
   );
 }
